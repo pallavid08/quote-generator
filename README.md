@@ -1,5 +1,5 @@
 # quote-generator
-Vanilla JS Practice Project
+**Vanilla JS Practice Project**
 
 Link: https://pallavid08.github.io/quote-generator/
 
