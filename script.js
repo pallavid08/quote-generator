@@ -22,7 +22,7 @@ const removeLoading = () => {
 };
 
 // Show New Quote
-function newQuote() {
+function getNewQuote() {
    showLoading();
    // Pick a random quote from array
    const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
@@ -50,7 +50,7 @@ const getQuotes = async () => {
    try {
       const response = await fetch(apiUrl);
       apiQuotes = await response.json();
-      newQuote();
+      getNewQuote();
    } catch (error) {
       // Catch Error Here
    }
@@ -63,7 +63,7 @@ function tweetQuote() {
 }
 
 // Event Listeners
-newQuoteBtn.addEventListener('click', newQuote);
+newQuoteBtn.addEventListener('click', getNewQuote);
 twitterBtn.addEventListener('click', tweetQuote);
 
 // On Load
